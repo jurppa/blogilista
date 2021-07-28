@@ -107,7 +107,7 @@ describe('current favourite blog', () => {
     describe('person with most blogs', () => {
         test('who has most blogs', () => {
             const result = listHelper.mostBlogs(blogs)
-            console.log('has most blogs: ', result)
+            //console.log('has most blogs: ', result)
             expect(result.author).toEqual(blogs[3].author)
 
         })
@@ -115,7 +115,7 @@ describe('current favourite blog', () => {
     describe('person with most likes', () => {
         test('who has most likes', () => {
             const result = listHelper.mostLikes(blogs)
-            console.log('has most likes', result)
+            // console.log('has most likes', result)
             expect(result.author).toEqual(blogs[2].author)
 
         })

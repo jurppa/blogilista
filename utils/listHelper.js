@@ -16,7 +16,7 @@ const favouriteBlog = (blogs) => {
         return favourite
     }
     if(blogs.length === 0) {return 'No blogs'}
-    if(blogs.length === 1) {console.log('blogs length = 1', blogs[0]);return returnFavouriteBlog(blogs[0])}
+    if(blogs.length === 1) {return returnFavouriteBlog(blogs[0])}
     else {const topBlog = blogs.reduce((a, b) => a.likes > b.likes ? returnFavouriteBlog(a) : returnFavouriteBlog(b)); return topBlog}
 
 }
