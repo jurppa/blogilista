@@ -30,7 +30,7 @@ describe('api post tests', () => {
             url: 'www.testiblogi.fi',
             likes: 7}
 
-        await api.post('/api/blogs').send(testNote).expect(201)
+        await api.post('/api/blogs').send(testNote).expect(200)
 
         const response = await api.get('/api/blogs')
         await expect(response.body).toHaveLength(response.body.length)
@@ -50,6 +50,16 @@ describe('api post tests', () => {
     
    
     })
+})
+test('post should contain title and url, response should be 400 Bad request', async() => {
+    const inadequateBlog = {
+        
+        author: 'Testaaja',
+        
+    }
+    
+    await api.post('/api/blogs').send(inadequateBlog).expect(400)
+   
 })
 afterAll(() => {
     mongoose.connection.close()
