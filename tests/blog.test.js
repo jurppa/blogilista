@@ -116,6 +116,8 @@ describe('current favourite blog', () => {
         test('who has most likes', () => {
             const result = listHelper.mostLikes(blogs)
             console.log('has most likes', result)
+            expect(result.author).toEqual(blogs[2].author)
+
         })
     })
 })
