@@ -6,7 +6,7 @@ usersRouter.post('/', async (req, res) => {
     const body = req.body
     if(body.username.length < 3 || body.password.length < 3) 
     {
-        res.status(400).send('username and password must be over 3 characters')
+        res.status(400).send('username and password must be over 3 characters').end()
     }
     else {
         const saltRounds = 10
@@ -23,7 +23,7 @@ usersRouter.post('/', async (req, res) => {
 
             res.json(savedUser)
         } catch (error) {
-            res.status(400).send('Username must be unique.')
+            res.status(400).send('Username must be unique.').end()
        
         }
     }
