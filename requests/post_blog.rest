@@ -1,11 +1,12 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlBla2thU2FsYWluZW4iLCJpZCI6IjYxMDI0Y2VjYmUyNmFhMmRkYzg5MmUwNSIsImlhdCI6MTYyNzU0NDA3N30.cQcEh7nXm9ja-oh8gCpzIGS2kQAVDPLeFr1WDUm09z8
 
 {
    "likes": 17,
 
-    "title": "string",
-    "author": "String",
-    "url": "String"
+    "title": "jswebtasddsadsaasddsaasddasdsadsasoken",
+    "author": "Pekka",
+    "url": "asfafsfasfsaas"
 
 }
