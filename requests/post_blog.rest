@@ -1,11 +1,10 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNla3JldHVzZXIiLCJpZCI6IjYxMDJmNmFlY2FhYjE0MzQ1NDcyY2VhOSIsImlhdCI6MTYyNzU4NDE5Nn0.k2AjyDQY2PBkE5ouHEugy0iyUDYZ8C1r-_Lz9DPL_Io
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNla3JldHVzZXIiLCJpZCI6IjYxMDJmNmFlY2FhYjE0MzQ1NDcyY2VhOSIsImlhdCI6MTYyNzU4NjcyMH0.CUAqJ8QnNmGvY6yqYz2TwlVtR0WVYInNs68SgsuK1h8
 
 {
    "likes": 17,
 
-    "title": "testi title",
     "author": "Pekka",
     "url": "asfafsfasfsaas"
 

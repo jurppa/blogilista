@@ -25,7 +25,9 @@ blogRouter.post('/', async (req, res) => {
     const user = await User.findOne({})
 
     //const token = getTokenFrom(req)
-   
+    console.log('testataan ',blog.author)
+    if(blog.title === undefined || blog.url === undefined) {res.send(400).end()}
+    if(!req.token) {res.send(401).end()}
     console.log('post decoded token: ')
     const decodedToken = jwt.verify(req.token, process.env.SECRET)
 
@@ -45,7 +47,7 @@ blogRouter.post('/', async (req, res) => {
     
 
     } catch(exception) {
-        res.send(400)
+        console.log(exception)
     }
 })
 
