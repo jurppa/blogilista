@@ -61,6 +61,29 @@ test('post should contain title and url, response should be 400 Bad request', as
     await api.post('/api/blogs').send(inadequateBlog).expect(400)
    
 })
+
+describe('tests for user creation', () => {
+    
+    test('username and password should be over 3 characters', async () => {
+        const newUser = {
+            username: 'Peksi',
+
+            name: 'Pekka',
+            password: 'd'
+        }
+        const usersBefore = await api.get('/api/users')
+        
+
+        const response = await api.post('/api/users').send(newUser).expect(400)
+        const usersAfter = await api.get('/api/users')
+
+        await expect(response.text).toBe('username and password must be over 3 characters')
+        await expect(usersAfter.body.length).toBe(usersBefore.body.length)
+      
+    })
+
+})
 afterAll(() => {
     mongoose.connection.close()
+
 })
