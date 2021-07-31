@@ -52,6 +52,7 @@ blogRouter.post('/', async (req, res) => {
 })
 
 blogRouter.delete('/:id', async (req, res) => {
+    console.log('delete kutsu')
     const deletenId = req.params.id.toString().trim()
     const decodedToken = jwt.verify(req.token, process.env.SECRET)
 
@@ -79,7 +80,6 @@ blogRouter.put('/:id', async(req, res) => {
 
 
     try {
-
         await Blog.findByIdAndUpdate(req.params.id.toString().trim(),req.body)
         res.sendStatus(200)
 
