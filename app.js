@@ -13,6 +13,7 @@ const loginRouter = require('./controllers/login')
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
     .then(() => console.log('connected to mongodb')).catch((error) => console.log('error in connection:', error.message)) 
 app.use(cors())
+
 app.use(express.json())
 
 app.use(middleware.getTokenFrom)
@@ -23,4 +24,5 @@ if (process.env.NODE_ENV === 'test') {
     const testingRouter = require('./controllers/testing')
     app.use('/api/testing', testingRouter)
 }
+
 module.exports = app

@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs/610805c64833a60c40b1a4e0/comments
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNla3JldHVzZXIiLCJpZCI6IjYxMTVmZWZlNmNjZDU0MDdjY2MxMTliYiIsImlhdCI6MTYyOTUzMDc3Nn0.uLDkp7YPDzsTxyHQOx4sjspxHWv7Fxzquynbe5YhLNU
+
+{
+  
+  "id": 2,
+  "comment": "hyvä blogi"
+
+}

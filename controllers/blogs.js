@@ -90,6 +90,21 @@ blogRouter.put('/:id', async(req, res) => {
         
     }
 })
+blogRouter.post('/:id/comments', async(req,res) => {
+    console.log('kommenttirouter')
+    try {
+        const comment = req.body
+        const blogToComment = await Blog.findByIdAndUpdate(req.params.id.toString().trim(),req.body)
+        blogToComment.comments = blogToComment.comments.concat(req.body)
+        console.log(comment)
+        console.log(blogToComment.comments)
+    } catch (error) {
+        const blogToComment = await Blog.findByIdAndUpdate(req.params.id.toString().trim(),req.body)
+        console.log(blogToComment)
+        console.log(req.params.id)
+        res.sendStatus(400)
+    }
+})
 
 
 
