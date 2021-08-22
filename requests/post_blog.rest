@@ -1,11 +1,11 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNla3JldHVzZXIiLCJpZCI6IjYxMDY1ZDBiOTEzMDY1MDQ5NGYxOWExMyIsImlhdCI6MTYyNzgwNzY5Mn0.D0vZQaS-nmaH93hsijT4QKn9NUOn60ssVeARjv_Y4bo
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNla3JldHVzZXIiLCJpZCI6IjYxMjFlMzMxYmExMTM5NTU3NGRiZjlmYyIsImlhdCI6MTYyOTYxMDgxMX0.I6r4Yy17iw59q8ZIhlVJ8Tk-YEeMeTFNIk7wcDAUrBU
 
 {
    "likes": 17,
-    "title": "tööt",
+    "title": "Kommentoitava blogi",
     "author": "Pek ka",
-    "url": "asfafsfasfsaas"
+    "url": "www.google.fi"
 
 }

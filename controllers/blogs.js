@@ -1,6 +1,7 @@
 const blogRouter = require('express').Router()
 const Blog = require('../models/blog')
 const User = require('../models/user')
+const Comment = require('../models/comment')
 const jwt = require('jsonwebtoken')
 
 
@@ -15,7 +16,7 @@ blogRouter.get('/', async (request, response) => {
 
     //console.log('get request')
     const blogs = await  Blog
-        .find({}).populate('user')
+        .find({}).populate('user').populate('comments')
     response.json(blogs.map(blog => blog.toJSON()))
   
 })
@@ -93,15 +94,18 @@ blogRouter.put('/:id', async(req, res) => {
 blogRouter.post('/:id/comments', async(req,res) => {
     console.log('kommenttirouter')
     try {
-        const comment = req.body
-        const blogToComment = await Blog.findByIdAndUpdate(req.params.id.toString().trim(),req.body)
-        blogToComment.comments = blogToComment.comments.concat(req.body)
-        console.log(comment)
-        console.log(blogToComment.comments)
+        const comment = new Comment({content: req.body.content})
+        const savedComment = await comment.save()
+        console.log('savedComment', savedComment)
+        const blogToComment = await Blog.findById(req.params.id.toString().trim())
+        blogToComment.comments = blogToComment.comments.concat(savedComment)
+        await blogToComment.save()
+        res.sendStatus(200)
     } catch (error) {
-        const blogToComment = await Blog.findByIdAndUpdate(req.params.id.toString().trim(),req.body)
-        console.log(blogToComment)
         console.log(req.params.id)
+
+
+        console.log(error)
         res.sendStatus(400)
     }
 })

@@ -1,10 +1,9 @@
-POST http://localhost:3003/api/blogs/610805c64833a60c40b1a4e0/comments
+POST http://localhost:3003/api/blogs/6121e366ba11395574dbfa01/comments
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNla3JldHVzZXIiLCJpZCI6IjYxMTVmZWZlNmNjZDU0MDdjY2MxMTliYiIsImlhdCI6MTYyOTUzMDc3Nn0.uLDkp7YPDzsTxyHQOx4sjspxHWv7Fxzquynbe5YhLNU
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNla3JldHVzZXIiLCJpZCI6IjYxMjFlMzMxYmExMTM5NTU3NGRiZjlmYyIsImlhdCI6MTYyOTYxMDgxMX0.I6r4Yy17iw59q8ZIhlVJ8Tk-YEeMeTFNIk7wcDAUrBU
 
 {
   
-  "id": 2,
-  "comment": "hyvä blogi"
+  "content": "hyvä blogi"
 
 }

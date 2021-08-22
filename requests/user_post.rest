@@ -1,5 +1,9 @@
-x
-    "name": "Pekka",
-    "password": "salainen"
+POST http://localhost:3003/api/users
+Content-Type: application/json
 
+{
+    "name": "Pekka",
+
+"username": "sekretuser",
+    "password": "salainen"
 }
